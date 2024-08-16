@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tuna Lazer</title>
+    <meta charset="utf-8">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("resimler/lazer\ makinesi-photoaidcom-blur.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(184, 137, 84, 0.678);
+        }
+
+        h2 {
+            text-align: left;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            height: 60px;
+            margin: 0 auto;
+            color: rgb(255, 255, 255);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .metin {
+            text-align: center;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav#ustmenu {
+            text-align: center;
+            margin: auto;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+        }
+
+        nav#ustmenu a , .dropbtn {
+            text-decoration: none;
+            font-family: "Poppins", sans-serif;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            padding: 0 10px;
+            position: relative;
+        }
+
+        nav#ustmenu a:before , .dropbtn:before,
+        nav#ustmenu a::after , .dropbtn:after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 0;
+            background-color: rgb(247, 199, 137);
+            transition: 0.5s;
+        }
+
+        nav#ustmenu a:after , .dropbtn:after {
+            left: 0;
+            bottom: -12px;
+        }
+
+        nav#ustmenu a:before , .dropbtn:before {
+            right: 0;
+            top: -11px;
+        }
+
+        nav#ustmenu a:hover , .dropbtn:hover {
+            color: #ffffff;
+        }
+
+        nav#ustmenu a:hover:after , .dropbtn:hover:after,
+        nav#ustmenu a:hover:before , .dropbtn:hover:before {
+            width: 100%;
+        }
+
+       
+
+     
+
+        .dropbtn {
+            text-align: center;
+            margin: auto;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(190, 186, 178, 0.8); /* change to your desired color */
+  
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  padding: 10px;
+  width: 180px;
+  left: -26px;
+  border-radius: 5px; /* for rounded corners */
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  margin: 20px;
+}
+
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+        #altmenu {
+            border-width: 1px;
+            text-align: center;
+            color: black;
+        }
+
+        #altmenu a {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+            font-weight: bolder;
+            color: black;
+            text-decoration: solid;
+        }
+
+        #altmenu a:link {
+            color: black;
+        }
+
+        #altmenu a:hover {
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+        }
+
+        .kucukmetin {
+            font-size: 12px;
+            position: relative;
+            top: 10px;
+            color: white;
+        }
+
+        video {
+    border-style: solid;
+    border-width: 4px;
+    margin: 20px auto; /* Orta hizalama için "auto" kullanıyoruz */
+    padding: 0px;
+    border-radius: 10px 10px;
+    border-color: black;
+    background-color: rgba(241, 237, 228, 0.384);
+    max-width: 600px; /* Maksimum genişlik belirleme */
+    height: 400px; /* Genişliğe oranlı yükseklik */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+        ul {
+            list-style-type: none;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Tuna Lazer</h2>
+    <hr>
+    <nav id="ustmenu">
+        <a href="index.html" style="color: white">Anasayfa</a>
+        <div class="dropdown">
+            <a style="color: white;" class="dropbtn">Hizmetlerimiz</a>
+            <div class="dropdown-content">
+            <a href="bıcak1.html">Bıçak Çizim</a>
+            <a href="kalıp1.html">Kalıp Bıçak</a>
+            <a href="kesim.html">Tahta Kesim</a>
+            </div>
+          </div>
+        <a href="iletisim.html" style="color: white">İletişim</a>
+        <hr>
+    </nav>
+    <center>
+        <div class="video">
+            <video src="resimler/lazerkesimvideo.mp4" controls width="1000"></video>
+        </div>
+        <p2 class="metin">
+            Her türlü kalıplar bıçak izlerine göre lazerde kesilerek, bıçak bükme makinasında yontulur ve tahtaya monte
+            edilir. <br>
+            Lastikleme işlemi sonrasında hizmete hazır durumunda teslim edilir.
+            <h1>Yapabildiğimiz kalıp bıçak türleri:</h1>
+            <ul class="metin">
+                <li>Bobs Kesim</li>
+                <li>Etiket Kesim</li>
+                <li>Oluklu Mukavva</li>
+                <li>Conta Kalıp</li>
+                <li>Frekans Kalıp</li>
+                <li>Deri Kalıp</li>
+                <li>Poşet kalıp</li>
+            </ul>
+        </p2>
+    </center>
+    <hr>
+    <footer id="altmenu">
+        <a class="menu1" style="color: rgb(255, 255, 255)" href="index.html">Anasayfa</a>
+        <a class="menu1" style="color: rgb(255, 255, 255);" href="hizmetlerimiz.html">Hizmetlerimiz</a>
+        <a class="menu1" style="color: rgb(255, 255, 255);" href="iletisim.html">İletişim</a>
+        <hr>
+        <p1 class="kucukmetin"> &copy; 2023 Tuna Lazer - Her Hakkı Saklıdır.</p1>
+    </footer>
+</body>
+
+</html>

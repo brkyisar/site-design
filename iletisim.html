@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tuna lazer</title>
+    <meta charset="utf-8">
+    <style>
+         h1 {
+      border-style: solid;
+      border-width: 4px;
+      margin: 50px;
+      padding: 10px;
+      border-radius: 10px 10px;
+      border-color: rgb(255, 255, 255);
+      background-color: rgba(241, 237, 228, 0.384);
+      height: 35px;
+      width: 400px;
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+      color: rgb(0, 0, 0);
+    }
+        
+        
+        h2 {
+        text-align: left;
+      font-size: 50px;
+      font-family: Arial, Helvetica, sans-serif;
+      width: 100%;
+      height: 60px;
+      margin: 0 ;
+      padding: 0;
+      
+      color: rgb(255, 255, 255);
+    }
+        #telefon{
+             font-size:x-large
+         }
+         #adres{
+             font-size:x-large
+         }
+         #email{
+             font-size:x-large
+         }
+         #harita{
+            width: 400px;
+            height: 400px;
+            border-style: solid;
+            border-width: 4px;
+            border-radius: 10px 10px;
+            border-color: #a0a0a0;
+            margin: 40px;
+            padding: 4px;
+            background-color:black;
+             
+        }
+       
+         p{
+             border-style: solid;
+             border-width: 4px;
+             margin: 100px;
+             padding:20px;
+             border-radius: 10px 10px;
+             border-color: #000000;
+              background-color: rgba(241, 237, 228, 0.384);
+             height: 100px;
+             width: 600px;
+             font-family: Verdana, Geneva, Tahoma, sans-serif;
+             text-align: center;
+             font-style: italic;
+             font-weight: bold;
+             
+             
+             
+
+         }
+         nav#ustmenu {
+            text-align: center;
+            margin: auto;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+        }
+
+        nav#ustmenu a , .dropbtn {
+            text-decoration: none;
+            font-family: "Poppins", sans-serif;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            padding: 0 10px;
+            position: relative;
+        }
+
+        nav#ustmenu a:before , .dropbtn:before,
+        nav#ustmenu a::after , .dropbtn:after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 0;
+            background-color: rgb(0, 0, 0);
+            transition: 0.5s;
+        }
+
+        nav#ustmenu a:after , .dropbtn:after {
+            left: 0;
+            bottom: -12px;
+        }
+
+        nav#ustmenu a:before , .dropbtn:before {
+            right: 0;
+            top: -11px;
+        }
+
+        nav#ustmenu a:hover , .dropbtn:hover {
+            color: #ffffff;
+        }
+
+        nav#ustmenu a:hover:after , .dropbtn:hover:after,
+        nav#ustmenu a:hover:before , .dropbtn:hover:before {
+            width: 100%;
+        }
+
+       
+
+     
+
+        .dropbtn {
+            text-align: center;
+            margin: auto;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(190, 186, 178, 0.8); /* change to your desired color */
+  
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  padding: 10px;
+  width: 180px;
+  left: -26px;
+  border-radius: 5px; /* for rounded corners */
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  margin: 20px;
+}
+
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+    #altmenu {
+  border-width: 1px;
+  text-align: center;
+  color: black;
+}
+
+#altmenu a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+  color: black;
+  text-decoration: solid;
+}
+
+#altmenu a:link {
+  color: black;
+}
+
+#altmenu a:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+
+.kucukmetin{
+    font-size: 12px;
+    position: relative;
+    top: 10px;
+    color: white;
+}
+#emailLink{
+    text-decoration: none;
+    color: white;
+}
+#phoneLink{
+    text-decoration: none;
+    color: white;
+}
+
+
+#p3{
+    color:black;
+}
+
+body {
+  background-image: url("resimler/giriş-photoaidcom-blur.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+</style>
+<!-- Google Font -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+  rel="stylesheet"
+/>
+<!-- Stylesheet -->
+<link rel="stylesheet" href="style.css" />
+         </style>
+</head>
+    <body style="background-color: rgb(186, 147, 118);">
+        <h2>Tuna Lazer</h2>
+        <hr>
+        <nav id="ustmenu">
+          <a href="index.html" style="color: rgb(0, 0, 0)">Anasayfa</a>
+          <div class="dropdown">
+              <a style="color: rgb(0, 0, 0);" class="dropbtn">Hizmetlerimiz</a>
+              <div class="dropdown-content">
+              <a href="bıcak1.html">Bıçak Çizim</a>
+              <a href="kalıp1.html">Kalıp Bıçak</a>
+              <a href="kesim.html">Tahta Kesim</a>
+              </div>
+            </div>
+          <a href="iletisim.html" style="color: rgb(0, 0, 0)">İletişim</a>
+      </nav>
+      <hr>
+    <article id="icerik">
+        <center>  
+        <p style="color: rgb(0, 0, 0)"><strong id="telefon">Telefon</strong>
+            <br><br>
+            <p3 style="color: rgb(0, 0, 0);">İş yeri telefonu: <a id="phoneLink" href="#" style="color: rgb(0, 0, 0);">0212 979 65 62</a></p3> 
+            
+            <script>
+                var phoneLink = document.getElementById("phoneLink");
+                phoneLink.addEventListener("click", function() {
+                  window.location.href = "tel:+902129796562";
+                });
+              </script>
+
+            <br><br>
+            <p3 style="color: rgb(0, 0, 0);">Cep telefonu: <a id="phoneLink" href="#" st style="color: rgb(0, 0, 0);"> 0535 278 42 73</a></p3> 
+
+            <script>
+                var phoneLink = document.getElementById("phoneLink");
+                phoneLink.addEventListener("click", function() {
+                  window.location.href = "tel:+905352784273";
+                });
+              </script>
+
+        </p>
+        <p style="color: rgb(0, 0, 0);"><strong id="adres">Adres</strong>
+            <br><br>
+            Topkapı ticaret merkezi 1.Kısım numara:362-367
+            <br><br>
+            Zeytinburnu/İstanbul
+        </p>
+ 
+        <p style="color: rgb(0, 0, 0);"><strong id="email">Email</strong>
+            <br><br>
+            <p3 style="color: rgb(0, 0, 0);">E-posta: <a id="emailLink" href="#" style="color: rgb(0, 0, 0);">tunalazer1@gmail.com</a></p3>
+        </p> 
+        <script>
+            var emailLink = document.getElementById("emailLink");
+            emailLink.addEventListener("click", function() {
+              window.location.href = "mailto:tunalazer1@gmail.com";
+            });
+          </script>
+             
+        <p1 style="color: rgb(0, 0, 0);">
+            <iframe id="harita" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d376.2936552574053!2d28.910247715936926!3d41.017614660841325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caba56a0a92d11%3A0x933644695234f48b!2sTopkap%C4%B1%20Ticaret%20Merkezi%201!5e0!3m2!1str!2str!4v1685410576899!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </p1> 
+        
+        <script>
+            var haritaElement = document.getElementById("harita");
+            haritaElement.addEventListener("click", function() {
+              var directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=41.018043118880854,28.910068514063624";
+              window.open(directionsUrl, "_blank");
+            });
+          </script>
+
+        </center> 
+      
+        
+            
+  
+    </body>
+</html>

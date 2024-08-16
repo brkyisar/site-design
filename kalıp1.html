@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tuna lazer</title>
+  <meta charset="utf-8">
+  <style>
+    /* Genel stil ayarları */
+body {
+  background-color: rgba(184, 137, 84, 0.678);
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  border-style: solid;
+  border-width: 4px;
+  margin: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: rgb(255, 255, 255);
+  background-color: rgba(241, 237, 228, 0.384);
+  height: 35px;
+  width: 400px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+h2 {
+  text-align: left;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  color: rgb(255, 255, 255);
+}
+
+nav#ustmenu {
+  text-align: center;
+  margin: auto;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+}
+
+nav#ustmenu a, .dropbtn {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+  position: relative;
+}
+
+nav#ustmenu a:before, .dropbtn:before,
+nav#ustmenu a::after, .dropbtn:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: rgb(247, 199, 137);
+  transition: 0.5s;
+}
+
+nav#ustmenu a:after, .dropbtn:after {
+  left: 0;
+  bottom: -12px;
+}
+
+nav#ustmenu a:before, .dropbtn:before {
+  right: 0;
+  top: -12px;
+}
+
+nav#ustmenu a:hover, .dropbtn:hover {
+  color: #ffffff;
+}
+
+nav#ustmenu a:hover:after, .dropbtn:hover:after,
+nav#ustmenu a:hover:before, .dropbtn:hover:before {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(190, 186, 178, 0.8);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  padding: 10px;
+  width: 170px;
+  left: -28px;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 20px 15px;
+  margin: 21px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#altmenu {
+  border-width: 1px;
+  text-align: center;
+  color: black;
+}
+
+#altmenu a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+  color: black;
+  text-decoration: solid;
+}
+
+#altmenu a:link {
+  color: black;
+}
+
+#altmenu a:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+.kucukmetin {
+  font-size: 12px;
+  position: relative;
+  top: 10px;
+  color: white;
+}
+
+.sirali-elemanlar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sirali-elemanlar > div {
+  flex-basis: 48%;
+  text-align: center;
+}
+
+img {
+  border-style: solid;
+  border-width: 4px;
+  margin: 20px;
+  padding: 0px;
+  border-radius: 10px;
+  border-color: rgb(255, 255, 255);
+  background-color: rgba(241, 237, 228, 0.384);
+  height: 400px;
+  width: 500px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+#buyume-resmi:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Resim butonları için stil */
+.resim-kutusu {
+  position: relative;
+  display: inline-block;
+}
+
+.resim-buton {
+  position: absolute;
+    bottom: 210px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1;
+}
+
+.resim-buton:focus {
+  outline: none;
+}
+
+.resim-buton:hover {
+  color: #ccc; /* Butonun hover rengini gri olarak ayarlar */
+}
+
+.onceki-buton {
+    left: 140px;
+}
+
+.sonraki-buton {
+    right: 140px;
+}
+
+/* Büyük resmin üzerine gelindiğinde butonların görünmesi için z-index değeri artırılır */
+#buyume-resmi:hover .resim-buton {
+  z-index: 2;
+}
+
+/* Büyüme efekti */
+img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Arkaplan resmi */
+body {
+  background-image: url("resimler/çekiçson.jpeg"); /* Arkaplan resmini belirtir */
+  background-repeat: no-repeat; /* Tekrarlama */
+  background-size: cover; /* Kapsama */
+}
+
+</style>
+</head>
+<body style="background-color: rgba(184, 137, 84, 0.678);">
+  <h2>Tuna Lazer</h2>
+  <hr>
+  <nav id="ustmenu">
+    <a href="index.html" style="color: white">Anasayfa</a>
+    <div class="dropdown">
+        <a style="color: white;" class="dropbtn">Hizmetlerimiz</a>
+        <div class="dropdown-content">
+          <a href="bıcak1.html">Bıçak Çizim</a>
+          <a href="kalıp1.html">Kalıp Bıçak</a>
+          <a href="kesim.html">Tahta Kesim</a>
+        </div>
+    </div>
+    <a href="iletisim.html" style="color: white">İletişim</a>
+    <hr>
+  </nav>
+
+  <div class="sirali-elemanlar">
+    <div class="resim-kutusu">
+        <h1>Etiket Bıçak</h1>
+        <button class="resim-buton onceki-buton" onclick="oncekiResim(0)">&#10094;</button>
+        
+            <img src="resimler/etiket bicak.jpeg" id="buyume-resmi-0" data-index="0">
+        
+        <button class="resim-buton sonraki-buton" onclick="sonrakiResim(0)">&#10095;</button>
+    </div>
+    <div class="resim-kutusu">
+        <h1>Deri Bıçak</h1>
+        <button class="resim-buton onceki-buton" onclick="oncekiResim(1)">&#10094;</button>
+        
+            <img src="resimler/deri bicak.jpeg" id="buyume-resmi-1" data-index="0">
+       
+        <button class="resim-buton sonraki-buton" onclick="sonrakiResim(1)">&#10095;</button>
+    </div>
+</div>
+
+<div class="sirali-elemanlar">
+    <div class="resim-kutusu">
+        <h1>Çanta Bıçak</h1>
+        <button class="resim-buton onceki-buton" onclick="oncekiResim(2)">&#10094;</button>
+        
+            <img src="resimler/canta.jpeg" id="buyume-resmi-2" data-index="0">
+       
+        <button class="resim-buton sonraki-buton" onclick="sonrakiResim(2)">&#10095;</button>
+    </div>
+    <div class="resim-kutusu">
+        <h1>Koku Bıçak</h1>
+        <button class="resim-buton onceki-buton" onclick="oncekiResim(3)">&#10094;</button>
+       
+            <img src="resimler/koku bicak.jpeg" id="buyume-resmi-3" data-index="0">
+       
+        <button class="resim-buton sonraki-buton" onclick="sonrakiResim(3)">&#10095;</button>
+    </div>
+</div>
+
+
+  <hr>
+  <footer id="altmenu">
+    <a class="menu1" style="color: rgb(255, 255, 255)" href="index.html">Anasayfa</a>
+    <a class="menu1" style="color:  rgb(255, 255, 255);" href="hizmetlerimiz.html">Hizmetlerimiz</a>
+    <a class="menu1" style="color:  rgb(255, 255, 255);" href="iletisim.html">İletişim</a>
+    <hr>
+    <p1 class="kucukmetin"> &copy; 2023 Tuna Lazer - Her Hakkı Saklıdır.</p1>  
+  </footer>
+
+  <script>
+    var resimler = [
+        ["resimler/etiket bicak.jpeg", "resimler/deri bicak.jpeg", "resimler/kucuk 4 lu.jpeg"],
+        ["resimler/deri bicak.jpeg", "resimler/resim2_2.jpg", "resimler/resim2_3.jpg"],
+        ["resimler/canta.jpeg", "resimler/resim3_2.jpg", "resimler/resim3_3.jpg"],
+        ["resimler/koku bicak.jpeg", "resimler/resim4_2.jpg", "resimler/resim4_3.jpg"]
+    ];
+
+    var indexler = [0, 0, 0, 0]; 
+
+    function oncekiResim(index) {
+        indexler[index] = (indexler[index] - 1 + resimler[index].length) % resimler[index].length;
+        document.getElementById("buyume-resmi-" + index).src = resimler[index][indexler[index]];
+    }
+
+    function sonrakiResim(index) {
+        indexler[index] = (indexler[index] + 1) % resimler[index].length;
+        document.getElementById("buyume-resmi-" + index).src = resimler[index][indexler[index]];
+    }
+
+    // Tüm resimlere event listener ekle
+    var resimKutulari = document.querySelectorAll('.resim-kutusu');
+    resimKutulari.forEach(function(resimKutusu, index) {
+        var resim = resimKutusu.querySelector('img');
+        var oncekiButon = resimKutusu.querySelector('.onceki-buton');
+        var sonrakiButon = resimKutusu.querySelector('.sonraki-buton');
+
+        // Resmin üzerine tıklama event listener'ı
+        resim.addEventListener('click', function(event) {
+            event.stopPropagation(); // Buton tıklamalarını engelle
+            window.open(resim.src, "_blank");
+        });
+
+        // Önceki buton event listener'ı
+        oncekiButon.addEventListener('click', function(event) {
+            event.stopPropagation(); // Resim üzerine tıklama işlemini engelle
+            oncekiResim(index);
+        });
+
+        // Sonraki buton event listener'ı
+        sonrakiButon.addEventListener('click', function(event) {
+            event.stopPropagation(); // Resim üzerine tıklama işlemini engelle
+            sonrakiResim(index);
+        });
+    });
+  </script>
+  

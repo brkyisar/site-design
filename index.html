@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tuna Lazer</title>
+    <meta charset="utf-8">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgba(123, 108, 101, 0.678);
+            overflow-x: hidden; /* Disable horizontal scrolling */
+            background-image: url("resimler/anamenuarkaplan.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        h2 {
+            text-align: left;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            height: 60px;
+            margin: 0 auto;
+            color: rgb(255, 255, 255);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .metin {
+            text-align: center;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        nav#ustmenu {
+            text-align: center;
+            margin: auto;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+        }
+
+        nav#ustmenu a,
+        .dropbtn {
+            text-decoration: none;
+            font-family: "Poppins", sans-serif;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            padding: 0 10px;
+            position: relative;
+        }
+
+        nav#ustmenu a:before,
+        .dropbtn:before,
+        nav#ustmenu a::after,
+        .dropbtn:after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 0;
+            background-color: rgb(247, 199, 137);
+            transition: 0.5s;
+        }
+
+        nav#ustmenu a:after,
+        .dropbtn:after {
+            left: 0;
+            bottom: -12px;
+        }
+
+        nav#ustmenu a:before,
+        .dropbtn:before {
+            right: 0;
+            top: -11px;
+        }
+
+        nav#ustmenu a:hover,
+        .dropbtn:hover {
+            color: #ffffff;
+        }
+
+        nav#ustmenu a:hover:after,
+        .dropbtn:hover:after,
+        nav#ustmenu a:hover:before,
+        .dropbtn:hover:before {
+            width: 100%;
+        }
+
+        .dropbtn {
+            text-align: center;
+            margin: auto;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(190, 186, 178, 0.8);
+            /* Modified color */
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            padding: 10px;
+            width: 180px;
+            left: -26px;
+            border-radius: 5px;
+            /* for rounded corners */
+        }
+
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+            margin: 20px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        #video-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        #video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            transform: translateY(-50%);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding-top: 0px; /* Leave space equal to the video height */
+            color: white;
+        }
+
+        #altmenu {
+            border-width: 1px;
+            text-align: center;
+            color: black;
+        }
+
+        #altmenu a {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+            font-weight: bolder;
+            color: black;
+            text-decoration: solid;
+        }
+
+        #altmenu a:link {
+            color: black;
+        }
+
+        #altmenu a:hover {
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+        }
+
+        .kucukmetin {
+            font-size: 12px;
+            position: relative;
+            top: 10px;
+            color: white;
+        }
+
+        p {
+            text-align: center;
+            font-size: 17px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="background-image">
+
+        <!-- Content -->
+        <h2>Tuna Lazer</h2>
+        <hr>
+        <nav id="ustmenu">
+            <a href="index.html" style="color: white">Anasayfa</a>
+            <div class="dropdown">
+                <a style="color: white;" class="dropbtn">Hizmetlerimiz</a>
+                <div class="dropdown-content">
+                    <a href="bıcak1.html">Bıçak Çizim</a>
+                    <a href="kalıp1.html">Kalıp Bıçak</a>
+                    <a href="kesim.html">Tahta Kesim</a>
+                </div>
+            </div>
+            <a href="iletisim.html" style="color: white">İletişim</a>
+            <hr>
+        </nav>
+
+        <div id="video-container">
+            <video autoplay loop muted playsinline id="video-background">
+                <source src="resimler/lazer kesim.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="content">
+            <h1>Hakkımızda</h1>
+            <p>
+                Tuna Lazer 2015 yılında kurulmuştur.<br>
+                Şirketimizde 3 adet bıçak bükme robotu, 1 adet pilyaj robotu, ploter maket makinası ve tahta kesim lazeri bulunmaktadır.<br>
+                20 yıllık iş tecrübesiyle hizmet vermektedirler.
+            </p>
+            <br>
+            <h1>Vizyonumuz</h1>
+            <p>
+                Kuruluşundan günümüze kadar müşteri memnuniyetini temel ilke edinen Tuna Lazer müşterilerine kaliteli sağlam
+                ürünler sunmanın yanında, alanındaki trendleri takip ederek ve en iyi hizmeti sunarak onlarla uzun vadeli
+                dostluklar kurmayı görev edinmiştir.
+            </p>
+        </div>
+        
+
+        <script>
+            window.addEventListener('scroll', function() {
+                var video = document.getElementById('video-background');
+                var value = window.scrollY;
+                video.style.top = value * 0.5 + 'px';
+            });
+        </script>
+</body>
+
+</html>
